@@ -103,13 +103,13 @@ def follow_and_return_random_fellow():
 	friends = []
 	friends_of_friends = []
 	
-	master = tweepy.api.get_user('yugdom')
+	master = api.get_user('yugdom')
 	for f in master.friends():
 		friends.append(f.screen_name)
 
 	x=randint(0,len(friends)-1)	
 
-	friend = tweepy.api.get_user(friends[x])
+	friend = api.get_user(friends[x])
 
 	for f in friend.friends():
 		friends_of_friends.append(f.screen_name)	

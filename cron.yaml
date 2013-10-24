@@ -1,5 +1,13 @@
 cron:
-- description: Cron Job
-  url: /bots/twitterbot
-  schedule: every 1 mins
+- description: cron job tweet
+  url: /tweet
+  schedule: every 17 mins
+
+- description: cron job update database
+  url: /db
+  schedule: every 24 hours
+
+- description: cron job follow any random user
+  url: /follow
+  schedule: every 10 hours
 

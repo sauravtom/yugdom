@@ -1,11 +1,16 @@
-application: hai-fa
-version: 1
-runtime: python
+application: yugdom-gae
+version: 2
+runtime: python27
 api_version: 1
+threadsafe: yes
 
 handlers:
 - url: .*
-  script: app.py
+  script: app.application
 
 builtins:
 - remote_api: on
+
+libraries:
+- name: webapp2
+  version: latest
